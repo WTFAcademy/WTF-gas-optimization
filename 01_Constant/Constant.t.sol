@@ -11,14 +11,14 @@ contract ConstantTest is Test {
     }
 
     function testConstant() public {
-        constantContract.number();
+        constantContract.varConstant();
     }
 
-    function testConstant2() public {
-        constantContract.number2();
+    function testImmutable() public {
+        constantContract.varImmutable();
     }
 
-    function testConstant3() public {
-        constantContract.number3();
+    function testVariable() public {
+        constantContract.variable();
     }
 }
