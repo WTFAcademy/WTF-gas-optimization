@@ -1,11 +1,11 @@
-# 03 位运算符
+# 03 位图与位运算符
 
 ## 运行
 
 根据[Foundry 官方文档](https://getfoundry.sh/)配置好运行环境后，于本项目下执行下列命令，即可看到实际 gas 差异对比。
 
 ```bash
-forge test --contracts forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
+forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 ```
 
 ## 功能简述
