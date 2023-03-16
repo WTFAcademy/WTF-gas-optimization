@@ -1,4 +1,4 @@
-# 01 constant、immutable、常量
+# 01 constant、immutable、变量
 
 ## 运行
 
@@ -14,7 +14,7 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 2. immutable：定义一个常量，可以在部署时和 constructor 中进行赋值，且后期不可变更。
 
-3. 常量：定义一个常量，可以在任意环节进行赋值，且后期可以变更。
+3. 变量：定义一个变量，可以在任意环节进行赋值，且后期可以变更。
 
 ## DemoCode
 
