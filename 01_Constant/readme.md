@@ -8,8 +8,6 @@
 forge test --contracts 01_Constant/Constant.t.sol --gas-report
 ```
 
----
-
 ## 功能简述
 
 1. constant：定义一个常量，需要在部署时进行赋值，且后期不可变更。
@@ -40,4 +38,4 @@ contract Constant {
 | --------- | -------- | --------------------- | ---- |
 | constant  | 183      | 2122(≈92%)｜ ✅ 建议  |
 | immutable | 161      | 2144(≈93%) ｜ ✅ 建议 |
-| variable  | 2305     | ｜                    |
+| variable  | 2305     |                       |      |

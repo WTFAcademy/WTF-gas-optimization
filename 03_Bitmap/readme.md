@@ -8,8 +8,6 @@
 forge test --contracts forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 ```
 
----
-
 ## 功能简述
 
 我们知道在区块链上，存储是非常昂贵的，在一些前沿的项目中，会用一些 hack 的方法来降低 gas，今天讲的这种方法，就常见于一些头部项目的源码中。
