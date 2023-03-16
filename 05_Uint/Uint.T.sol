@@ -10,51 +10,51 @@ contract UncheckedTest is Test {
         uintContract = new Uint();
     }
 
-    function testGetA() public {
-        uintContract.a();
+    function testGetUint8() public {
+        uintContract.Uint8();
     }
 
-    function testGetB() public {
-        uintContract.b();
+    function testGetUint16() public {
+        uintContract.Uint16();
     }
 
-    function testGetC() public {
-        uintContract.c();
+    function testGetUint32() public {
+        uintContract.Uint32();
     }
 
-    function testGetD() public {
-        uintContract.d();
+    function testGetUint64() public {
+        uintContract.Uint64();
     }
 
-    function testGetE() public {
-        uintContract.e();
+    function testGetUint128() public {
+        uintContract.Uint128();
     }
 
-    function testGetF() public {
-        uintContract.f();
+    function testGetUint256() public {
+        uintContract.Uint256();
     }
 
-    function testSetA() public {
-        uintContract.setA(11);
+    function testSetUint8() public {
+        uintContract.setUint8(11);
     }
 
-    function testSetB() public {
-        uintContract.setB(11);
+    function testSetUint16() public {
+        uintContract.setUint16(11);
     }
 
-    function testSetC() public {
-        uintContract.setC(11);
+    function testSetUint32() public {
+        uintContract.setUint32(11);
     }
 
-    function testSetD() public {
-        uintContract.setD(11);
+    function testSetUint64() public {
+        uintContract.setUint64(11);
     }
 
-    function testSetE() public {
-        uintContract.setE(11);
+    function testSetUint128() public {
+        uintContract.setUint128(11);
     }
 
-    function testSetF() public {
-        uintContract.setF(11);
+    function testSetUint256() public {
+        uintContract.setUint256(11);
     }
 }

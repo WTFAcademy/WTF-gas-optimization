@@ -2,34 +2,34 @@
 pragma solidity ^0.8.13;
 
 contract Uint {
-    uint8 public a = 10;
-    uint16 public b = 10;
-    uint32 public c = 10;
-    uint64 public d = 10;
-    uint128 public e = 10;
-    uint256 public f = 10;
+    uint8 public Uint8 = 10;
+    uint16 public Uint16 = 10;
+    uint32 public Uint32 = 10;
+    uint64 public Uint64 = 10;
+    uint128 public Uint128 = 10;
+    uint256 public Uint256 = 10;
 
-    function setA(uint8 a_) external {
-        a = a_;
+    function setUint8(uint8 Uint8_) external {
+        Uint8 = Uint8_;
     }
 
-    function setB(uint16 b_) external {
-        b = b_;
+    function setUint16(uint16 Uint16_) external {
+        Uint16 = Uint16_;
     }
 
-    function setC(uint32 c_) external {
-        c = c_;
+    function setUint32(uint32 Uint32_) external {
+        Uint32 = Uint32_;
     }
 
-    function setD(uint64 d_) external {
-        d = d_;
+    function setUint64(uint64 Uint64_) external {
+        Uint64 = Uint64_;
     }
 
-    function setE(uint128 e_) external {
-        e = e_;
+    function setUint128(uint128 Uint128_) external {
+        Uint128 = Uint128_;
     }
 
-    function setF(uint256 f_) external {
-        f = f_;
+    function setUint256(uint256 Uint256_) external {
+        Uint256 = Uint256_;
     }
 }
