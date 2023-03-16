@@ -1,4 +1,4 @@
-# 01 calldata、memory 引用类型修饰符
+# 02 calldata、memory 引用类型修饰符
 
 ## 运行
 
@@ -14,7 +14,7 @@ forge test --contracts 02_calldataAndMemory/CalldataAndMemory.T.sol --gas-report
 
 1. memory：函数里的参数和临时变量一般用 memory，存储在内存中，不上链。
 
-2. calldata：和 memory 类似，存储在内存中，不上链。与 memory 的不同点在于 calldata 变量不能修改（immutable），一般用于函数的参数。例子：
+2. calldata：和 memory 类似，存储在内存中，不上链。与 memory 的不同点在于 calldata 变量不能修改（immutable），一般用于函数的参数。
 
 ## DemoCode
 
@@ -45,7 +45,7 @@ contract CalldataAndMemory {
 
 1. 结合实际情况下，建议优先使用 calldata 进行变量写入。
 
-| 关键字          | gas 消耗 | 结果    |
-| --------------- | -------- | ------- |
-| writeByCalldata | 67905    |         |
-| writeByMemory   | 68456    | ✅ 最佳 |
+| 关键字   | gas 消耗 | 节省     | 结果    |
+| -------- | -------- | -------- | ------- |
+| calldata | 67905    | 551(≈8%) | ✅ 建议 |
+| memory   | 68456    |          |         |
