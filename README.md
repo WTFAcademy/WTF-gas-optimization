@@ -14,13 +14,13 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [5. use uint256 over uint8](#5-use-uint256-over-uint8)
 
-[6. use revert over require and assert](#6-use-revert-over-require-and-assert)
+[6. use custom error over require/assert](#6-use-custom-error-over-requireassert)
 
-[7. use local variable to operation](#7-use-local-variable-to-operation)
+[7. use local variable over storage](#7-use-local-variable-over-storage)
 
 ## 1. use constant and immutable
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) |[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) |[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
 
 **Testing**
 
@@ -38,7 +38,7 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 ## 2. use calldata over memory
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/02_CalldataAndMemory/CalldataAndMemory.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/tree/main/02_CalldataAndMemory/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/02_CalldataAndMemory/CalldataAndMemory.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/tree/main/02_CalldataAndMemory/readme.md)
 
 **Testing**
 
@@ -55,7 +55,7 @@ forge test --contracts 02_CalldataAndMemory/CalldataAndMemory.T.sol --gas-report
 
 ## 3. use Bitmap
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/Bitmap.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/Bitmap.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/readme.md)
 
 **Testing**
 
@@ -72,7 +72,7 @@ forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 
 ## 4. use unchecked
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/04_Unchecked/Unchecked.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/04_Unchecked/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/04_Unchecked/Unchecked.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/04_Unchecked/readme.md)
 
 **Testing**
 
@@ -89,7 +89,7 @@ forge test --contracts 04_unchecked/Unchecked.T.sol --gas-report
 
 ## 5. use uint256 over uint8
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/05_Uint/Uint.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/05_Uint/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/05_Uint/Uint.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/05_Uint/readme.md)
 
 **Testing**
 
@@ -108,9 +108,9 @@ forge test --contracts 05_uint/Uint.T.sol --gas-report
 | set Uint128      | 5358     |
 | **set Uint256**  | 5322 ✅  |
 
-## 6. use revert over require and assert
+## 6. use custom error over require/assert
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/Error.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/Error.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/readme.md)
 
 **Testing**
 
@@ -126,9 +126,9 @@ forge test --contracts 06_Error/Error.T.sol --gas-report
 | Require    | 268      |
 | **Revert** | 164 ✅   |
 
-## 7. use local variable to operation
+## 7. use local variable over storage
 
-[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/LocalData.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/LocalData.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/readme.md)
 
 **Testing**
 
