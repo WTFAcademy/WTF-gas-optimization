@@ -124,7 +124,7 @@ forge test --contracts 06_Error/Error.T.sol --gas-report
 | ---------- | -------- |
 | Assert     | 180      |
 | Require    | 268      |
-| Revert     | 164 ✅   |
+| **Revert** | 164 ✅   |
 
 ## 7. use local variable to operation
 
@@ -138,10 +138,10 @@ forge test --contracts 07_LocalData/LocalData.T.sol --gas-report
 
 **Gas report**
 
-| Data Type   | Gas Cost   |
-| ----------- | ---------- |
-| localData   | 1902339 ✅ |
-| storageData | 4022155    |
+| Data Type     | Gas Cost   |
+| ------------- | ---------- |
+| **localData** | 1902339 ✅ |
+| storageData   | 4022155    |
 
 ## WTF Gas Optimization 贡献者
 
