@@ -110,13 +110,21 @@ forge test --contracts 05_uint/Uint.T.sol --gas-report
 
 [代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/Error.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/06_Error/readme.md)
 
+**Testing**
+
+```
+forge test --contracts 06_Error/Error.T.sol --gas-report
+```
+
+**Gas report**
+
 | Error Name | Gas Cost |
 | ---------- | -------- |
 | Assert     | 180      |
 | Require    | 268      |
 | Revert     | 164 ✅   |
 
-**Gas report**
+
 
 ## WTF Gas Optimization 贡献者
 
