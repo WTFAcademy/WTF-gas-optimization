@@ -14,8 +14,8 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [5. use uint256 over uint8](#5-use-uint256-over-uint8)
 
-
 ## 1. use constant and immutable 
+
 [代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) |[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
 
 **Testing**
@@ -26,29 +26,28 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 **Gas report**
 
-| Function Name                            | Gas Cost |
-| ---------------------------------- | ----- | 
-| varConstant | 183  |
-| **varImmutable** | 161 ✅ |
-| variable      | 2305 |
-
+| Function Name    | Gas Cost |
+| ---------------- | -------- |
+| varConstant      | 183      |
+| **varImmutable** | 161 ✅   |
+| variable         | 2305     |
 
 ## 2. use calldata over memory 
+
 [代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/02_CalldataAndMemory/CalldataAndMemory.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/tree/main/02_CalldataAndMemory/readme.md)
 
 **Testing**
 
 ```
-forge test --contracts 02_calldataAndMemory/CalldataAndMemory.T.sol --gas-report
+forge test --contracts 02_CalldataAndMemory/CalldataAndMemory.T.sol --gas-report
 ```
 
 **Gas report**
 
-| Function Name                            | Gas Cost |
-| ---------------------------------- | ----- | 
+| Function Name       | Gas Cost |
+| ------------------- | -------- |
 | **writeByCalldata** | 67905 ✅ |
-| writeByMemory      | 68456 |
-
+| writeByMemory       | 68456    |
 
 ## 3. use Bitmap
 [代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/Bitmap.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/03_Bitmap/readme.md)
@@ -62,11 +61,10 @@ forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 
 **Gas report**
 
-| Function Name                            | Gas Cost |
-| ---------------------------------- | ----- | 
+| Function Name         | Gas Cost |
+| --------------------- | -------- |
 | **setDataWithBitmap** | 22366 ✅ |
-| setDataWithBoolArray      | 35729 |
-
+| setDataWithBoolArray  | 35729    |
 
 ## 4. use unchecked
 
@@ -80,10 +78,10 @@ forge test --contracts 04_unchecked/Unchecked.T.sol --gas-report
 
 **Gas report**
 
-| Function Name                            | Gas Cost |
-| ---------------------------------- | ----- | 
-| forNormal | 1910309  |
-| **forUnckecked**      | 570287 ✅ |
+| Function Name    | Gas Cost  |
+| ---------------- | --------- |
+| forNormal        | 1910309   |
+| **forUnckecked** | 570287 ✅ |
 
 ## 5. use uint256 over uint8
 
@@ -97,15 +95,14 @@ forge test --contracts 05_uint/Uint.T.sol --gas-report
 
 **Gas report**
 
-| Function Name                            | Gas Cost |
-| ---------------------------------- | ----- | 
-| read Uint8 | 2379  |
-| read Uint128 | 2465  |
-| **read Uint256** | 2317 ✅ |
-| setUint8 | 5355  |
-| setUint128 | 5358  |
-| **setUint256** | 5322 ✅  |
-
+| Function Name    | Gas Cost |
+| ---------------- | -------- |
+| read Uint8       | 2379     |
+| read Uint128     | 2465     |
+| **read Uint256** | 2317 ✅  |
+| set Uint8        | 5355     |
+| set Uint128      | 5358     |
+| **set Uint256**  | 5322 ✅  |
 
 ## WTF Gas Optimization 贡献者
 
