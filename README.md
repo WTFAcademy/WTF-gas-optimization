@@ -128,6 +128,8 @@ forge test --contracts 06_Error/Error.T.sol --gas-report
 
 ## 7. use local variable to operation
 
+[代码](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/LocalData.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/07_LocalData/readme.md)
+
 **Testing**
 
 ```bash
