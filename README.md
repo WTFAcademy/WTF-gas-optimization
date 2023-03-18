@@ -18,7 +18,7 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [7. use local variable over storage](#7-use-local-variable-over-storage)
 
-[8. use Clone2 over new to create a new contract](#8-use-clone2-over-new-to-create-a-new-contract)
+[8. use clone2 over new/create2](#8-use-clone2-over-newcreate2)
 
 ## 1. use constant and immutable
 
