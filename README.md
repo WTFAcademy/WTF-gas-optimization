@@ -145,7 +145,7 @@ forge test --contracts 07_LocalData/LocalData.T.sol --gas-report
 | **localData** | 1902339 ✅ |
 | storageData   | 4022155    |
 
-## 8. use Clone2 over new to create a new contract
+## 8. use clone2 over new/create2
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/Clone2.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/readme.md)
 

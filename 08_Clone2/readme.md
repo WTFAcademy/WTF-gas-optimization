@@ -1,4 +1,4 @@
-# 08 Clone2 over new to create a new contract
+# 08 clone2 替换 new/create2
 
 ## 运行
 
