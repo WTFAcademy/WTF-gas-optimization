@@ -10,11 +10,11 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 ## 功能简述
 
-1. constant：定义一个常量，需要在部署时进行赋值，且后期不可变更。
+1. constant：声明一个常量，需要在声明时进行赋值，且后期不可变更。
 
-2. immutable：定义一个常量，可以在部署时和 constructor 中进行赋值，且后期不可变更。
+2. immutable：声明一个常量，可以在声明时和 constructor 中进行赋值，且后期不可变更。
 
-3. 变量：定义一个变量，可以在任意环节进行赋值，且后期可以变更。
+3. 变量：声明一个变量，可以在任意环节进行赋值，且后期可以变更。
 
 ## DemoCode
 
