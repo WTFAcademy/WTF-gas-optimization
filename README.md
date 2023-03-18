@@ -18,6 +18,8 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [7. use local variable over storage](#7-use-local-variable-over-storage)
 
+[8. use Clone2 over new to create a new contract](#8-use-clone2-over-new-to-create-a-new-contract)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) |[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -142,6 +144,24 @@ forge test --contracts 07_LocalData/LocalData.T.sol --gas-report
 | ------------- | ---------- |
 | **localData** | 1902339 ✅ |
 | storageData   | 4022155    |
+
+## 8. use Clone2 over new to create a new contract
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/Clone2.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/readme.md)
+
+**Testing**
+
+```bash
+forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
+```
+
+**Gas report**
+
+| Create Type | Gas Cost |
+| ----------- | -------- |
+| **clone2**  | 41493 ✅ |
+| create2     | 93031    |
+| new         | 79515    |
 
 ## WTF Gas Optimization 贡献者
 
