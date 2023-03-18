@@ -22,7 +22,7 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 ## 1. use constant and immutable
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) |[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
 
 **Testing**
 
