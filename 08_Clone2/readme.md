@@ -18,7 +18,7 @@ forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
 
 ## DemoCode
 
-下面分别用两种形式来修改存储变量，观测其 gas 差异。
+下面分别用三种形式来创建自合约，观察gas差异：
 
 ```solidity
 function newContract() external returns (address) {
