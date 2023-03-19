@@ -20,6 +20,8 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [8. use clone2 over new/create2](#8-use-clone2-over-newcreate2)
 
+[9. packing storage slots](#9-packing-storage-slots)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -162,6 +164,24 @@ forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
 | **clone2**  | 41493 ✅ |
 | create2     | 93031    |
 | new         | 79515    |
+
+## 9. packing storage slots
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/Packing.sol) 
+
+**Testing**
+
+```bash
+forge test --contracts 09_Packing/Packing.T.sol --gas-report
+```
+
+**Gas report**
+
+| Create Type | Gas Cost |
+| ----------- | -------- |
+| normal  | 67125 |
+| **packing**     | 67103 ✅ |
+
 
 ## WTF Gas Optimization 贡献者
 
