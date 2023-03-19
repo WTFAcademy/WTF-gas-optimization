@@ -31,8 +31,8 @@ contract Unchecked {
     function forUnckecked(uint256 times) external pure returns (uint256 result) {
         for (uint256 i; i < times; ) {
             unchecked {
-                i++;
                 result = i + 1;
+                i++;
             }
         }
     }
