@@ -179,8 +179,8 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 
 | Create Type | Gas Cost |
 | ----------- | -------- |
-| normal  | 67125 |
-| **packing**     | 67103 ✅ |
+| normal  | 133521 |
+| **packing**     | 111351 ✅ |
 
 
 ## WTF Gas Optimization 贡献者
