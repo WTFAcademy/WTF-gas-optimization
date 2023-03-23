@@ -22,6 +22,8 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 [9. packing storage slots](#9-packing-storage-slots)
 
+[10. use ++i as better increment](#10-use-i-as-better-increment)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -167,7 +169,7 @@ forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
 
 ## 9. packing storage slots
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/Packing.sol) 
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/Packing.sol)
 
 **Testing**
 
@@ -177,11 +179,25 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 
 **Gas report**
 
-| Create Type | Gas Cost |
-| ----------- | -------- |
-| normal  | 133521 |
-| **packing**     | 111351 ✅ |
+| Create Type | Gas Cost  |
+| ----------- | --------- |
+| normal      | 133521    |
+| **packing** | 111351 ✅ |
 
+## 10. use ++i as better increment
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/10_Increment/Increment.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/10_Increment/readme.md)
+
+```bash
+forge test --contracts 10_Increment/Increment.T.sol --gas-report
+```
+
+| Increment | Gas Cost |
+| --------- | -------- |
+| i += 1    | 270      |
+| i = i +1  | 248      |
+| i++       | 220      |
+| ++i       | 193 ✅   |
 
 ## WTF Gas Optimization 贡献者
 
