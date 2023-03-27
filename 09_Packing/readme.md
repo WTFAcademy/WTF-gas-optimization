@@ -18,7 +18,7 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 
 ## DemoCode
 
-下面分别用两个变量打包顺序不一样的结构体进行测试，观察gas差异。
+下面分别用变量打包顺序不一样的合约进行测试，观察gas差异。
 
 ```solidity
 contract Normal{
