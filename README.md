@@ -215,7 +215,7 @@ forge test --contracts 11_ReentrancyGuards/ReentrancyGuards.T.sol --gas-report
 | -----------------| -------- |
 | Bool             | 69395    |
 | Uint01           | 69354    |
-| Uint12           | 89259 ✅ |
+| **Uint12**       | 89259 ✅ |
 
 
 ## WTF Gas Optimization 贡献者

@@ -64,7 +64,7 @@ contract ReentrancyGuardsUint12{
 | Uint01   | 69354    |             |         |
 | Uint12   | 89259    |             | ✅ 建议 |
 
-相关参考资料链接：
-   https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.8.2/contracts/security/ReentrancyGuard.sol
-   https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a7-sstore
-   https://medium.com/@kalexotsu/solidity-gas-optimization-stop-using-bools-for-true-false-values-e3a3d513f7fa
+参考资料：
+https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.8.2/contracts/security/ReentrancyGuard.sol
+https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a7-sstore
+https://medium.com/@kalexotsu/solidity-gas-optimization-stop-using-bools-for-true-false-values-e3a3d513f7fa
