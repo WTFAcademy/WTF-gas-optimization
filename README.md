@@ -169,7 +169,7 @@ forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
 
 ## 9. packing storage slots
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/Packing.sol)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/Packing.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/09_Packing/readme.md)
 
 **Testing**
 
@@ -198,6 +198,25 @@ forge test --contracts 10_Increment/Increment.T.sol --gas-report
 | i = i +1  | 248      |
 | i++       | 220      |
 | ++i       | 193 ✅   |
+
+## 11. use Uint12 over Bool Uint01
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/ReentrancyGuards.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/readme.md)
+
+**Testing**
+
+```bash
+forge test --contracts 11_ReentrancyGuards/ReentrancyGuards.T.sol --gas-report
+```
+
+**Gas report**
+
+| ReentrancyGuards | Gas Cost |
+| -----------------| -------- |
+| Bool             | 69395    |
+| Uint01           | 69354    |
+| **Uint12**       | 89259 ✅ |
+
 
 ## WTF Gas Optimization 贡献者
 
