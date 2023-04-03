@@ -26,6 +26,8 @@ Lead by [@kasodesyn](https://github.com/kasodesyn)
 
 [10. use ++i as better increment](#10-use-i-as-better-increment)
 
+[10. use uint in reentrancy guard](#11-use-uint-in-reentrancy-guard)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -40,7 +42,7 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 | Function Name    | Gas Cost |
 | ---------------- | -------- |
-| varConstant      | 183      |
+| varConstant      | 183 ✅   |
 | **varImmutable** | 161 ✅   |
 | variable         | 2305     |
 
@@ -201,7 +203,7 @@ forge test --contracts 10_Increment/Increment.T.sol --gas-report
 | i++       | 220      |
 | ++i       | 193 ✅   |
 
-## 11. use Uint12 over Bool Uint01
+## 11. use Uint in Reentrancy Guard
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/ReentrancyGuards.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/readme.md)
 
