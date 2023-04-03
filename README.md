@@ -2,7 +2,7 @@
 
 Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能合约更省 gas 的技巧。
 
-Lead by @kasodesyn
+Lead by [@kasodesyn](https://github.com/kasodesyn)
 
 ## 大纲
 
