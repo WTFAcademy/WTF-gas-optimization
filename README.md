@@ -2,6 +2,8 @@
 
 Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能合约更省 gas 的技巧。
 
+Lead by @kasodesyn
+
 ## 大纲
 
 [1. use constant and immutable](#1-use-constant-and-immutable)
