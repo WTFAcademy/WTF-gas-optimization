@@ -26,7 +26,7 @@ Lead by [@kasodesyn](https://github.com/kasodesyn)
 
 [10. use ++i as better increment](#10-use-i-as-better-increment)
 
-[10. use uint in reentrancy guard](#11-use-uint-in-reentrancy-guard)
+[11. use uint in reentrancy guard](#11-use-uint-in-reentrancy-guard)
 
 ## 1. use constant and immutable
 
