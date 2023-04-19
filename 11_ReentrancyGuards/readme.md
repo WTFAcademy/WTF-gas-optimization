@@ -46,7 +46,6 @@ contract ReentrancyGuardsUint12{
         locked = 1;
     }
 }
-
 ```
 
 以下是测试后的情况说明，gas 优化建议如下：
@@ -58,11 +57,11 @@ contract ReentrancyGuardsUint12{
 
 因为一般重入保护函数是会被多次调用的，所以建议使用Uint12这种方式。
 
-| 重入保护 | gas 消耗  | 节省        | 结果    |
-| -------- | -------- | ----------- | ------- |
-| Bool     | 69395    |             |         |
-| Uint01   | 69354    |             |         |
-| Uint12   | 89259    |             | ✅ 建议 |
+| 重入保护 | gas 消耗 | 节省        | 结果   |
+| -------- | -------- | ----------- | ------ |
+| Bool     | 27757    |             |        |
+| Uint01   | 27604    | 153(≈0.6%)  |        |
+| Uint12d  | 13908    | 13849(≈50%) | ✅ 建议 |
 
 参考资料：
 https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.8.2/contracts/security/ReentrancyGuard.sol

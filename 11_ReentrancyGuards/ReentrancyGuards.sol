@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
  
 contract ReentrancyGuardsBool{
     bool private locked  = false;
-    modifier nonReentrant(){
+    modifier nonReentrantBool(){
         require(locked == false,"REENTRANCY");
         locked = true;
         _;
@@ -14,7 +14,7 @@ contract ReentrancyGuardsBool{
 
 contract ReentrancyGuardsUint01{
     uint256 private locked = 0;
-    modifier nonReentrant(){
+    modifier nonReentrant01(){
         require(locked == 0,"REENTRANCY");
         locked = 1;
         _;
@@ -25,7 +25,7 @@ contract ReentrancyGuardsUint01{
 
 contract ReentrancyGuardsUint12{
     uint256 private locked = 1;
-    modifier nonReentrant(){
+    modifier nonReentrant12(){
         require(locked == 1,"REENTRANCY");
         locked = 2;
         _;
