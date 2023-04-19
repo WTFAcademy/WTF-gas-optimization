@@ -219,9 +219,9 @@ forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 
 | ReentrancyGuard  | Gas Cost |           tips                    |
 | -----------------| -------- | ----------------------------------|
-| Bool             | 69395    |                                   |
-| Uint01           | 69354    | 0 to non-zero  -> 20000 gas       |
-| **Uint12**       | 89259 ✅ | non-zero to non-zero  -> 2900 gas |
+| Bool             | 27757 |                                   |
+| Uint01           | 27604 | 0 to non-zero  -> 20000 gas       |
+| **Uint12**       | 13908 ✅ | non-zero to non-zero  -> 2900 gas |
 
 
 ## WTF Gas Optimization 贡献者
