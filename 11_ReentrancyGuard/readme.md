@@ -5,19 +5,19 @@
 根据[Foundry 官方文档](https://getfoundry.sh/)配置好运行环境后，于本项目下执行下列命令，即可看到实际 gas 差异对比。
 
 ```bash
-forge test --contracts 11_ReentrancyGuards/ReentrancyGuards.T.sol --gas-report
+forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 ```
 
 ## 功能简述
 
-利用modifier 来验证合约的重入调用。设置一个Bool变量，每次调用的时候都验证当前是否为锁定状态。只有未锁定时，才会执行函数调用，函数结束时再次恢复锁的状态。虽然代码不多，但是非常精妙。同样，我们也可以用Uint变量来解决重入调用。
+利用modifier 来验证合约的重入调用。设置一个Bool变量，每次调用的时候都验证当前是否为锁定状态。只有未锁定时，才会执行函数调用，函数结束时再次恢复锁的状态，同样，我们也可以用Uint变量来解决重入调用。
 
 ## DemoCode
 
-下面分别用Bool和Uint(storage变量使用默认值0和非0初始化)两种形式解决重入调用，来观察其 gas 差异。
+下面分别用Bool、Uint01和Uint12(使用默认值0和非0初始化)三种形式解决重入调用，来观察其 gas 差异。
 
 ```solidity
-contract ReentrancyGuardsBool{
+contract ReentrancyGuardBool{
     bool private locked  = false;
     modifier nonReentrant(){
         require(locked == false,"REENTRANCY");
@@ -27,7 +27,7 @@ contract ReentrancyGuardsBool{
     }
 }
 
-contract ReentrancyGuardsUint01{
+contract ReentrancyGuardUint01{
     uint256 private locked = 0;
     modifier nonReentrant(){
         require(locked == 0,"REENTRANCY");
@@ -37,7 +37,7 @@ contract ReentrancyGuardsUint01{
     }
 }
 
-contract ReentrancyGuardsUint12{
+contract ReentrancyGuardUint12{
     uint256 private locked = 1;
     modifier nonReentrant(){
         require(locked == 1,"REENTRANCY");
@@ -63,8 +63,3 @@ contract ReentrancyGuardsUint12{
 | Bool     | 69395    |             |         |
 | Uint01   | 69354    |             |         |
 | Uint12   | 89259    |             | ✅ 建议 |
-
-参考资料：
-https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.8.2/contracts/security/ReentrancyGuard.sol
-https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a7-sstore
-https://medium.com/@kalexotsu/solidity-gas-optimization-stop-using-bools-for-true-false-values-e3a3d513f7fa
