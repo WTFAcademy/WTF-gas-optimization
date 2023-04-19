@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
  
-contract ReentrancyGuardsBool{
+contract ReentrancyGuardBool{
     bool private locked  = false;
     modifier nonReentrant(){
         require(locked == false,"REENTRANCY");
@@ -12,7 +12,7 @@ contract ReentrancyGuardsBool{
 }
 
 
-contract ReentrancyGuardsUint01{
+contract ReentrancyGuardUint01{
     uint256 private locked = 0;
     modifier nonReentrant(){
         require(locked == 0,"REENTRANCY");
@@ -23,7 +23,7 @@ contract ReentrancyGuardsUint01{
 }
 
 
-contract ReentrancyGuardsUint12{
+contract ReentrancyGuardUint12{
     uint256 private locked = 1;
     modifier nonReentrant(){
         require(locked == 1,"REENTRANCY");

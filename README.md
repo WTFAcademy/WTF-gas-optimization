@@ -196,6 +196,8 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 forge test --contracts 10_Increment/Increment.T.sol --gas-report
 ```
 
+**Gas report**
+
 | Increment | Gas Cost |
 | --------- | -------- |
 | i += 1    | 270      |
@@ -205,21 +207,21 @@ forge test --contracts 10_Increment/Increment.T.sol --gas-report
 
 ## 11. use Uint in Reentrancy Guard
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/ReentrancyGuards.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuards/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuard/ReentrancyGuard.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/11_ReentrancyGuard/readme.md)
 
 **Testing**
 
 ```bash
-forge test --contracts 11_ReentrancyGuards/ReentrancyGuards.T.sol --gas-report
+forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 ```
 
 **Gas report**
 
-| ReentrancyGuards | Gas Cost |
-| -----------------| -------- |
-| Bool             | 69395    |
-| Uint01           | 69354    |
-| **Uint12**       | 89259 ✅ |
+| ReentrancyGuard  | Gas Cost |           tips                    |
+| -----------------| -------- | ----------------------------------|
+| Bool             | 69395    |                                   |
+| Uint01           | 69354    | 0 to non-zero  -> 20000 gas       |
+| **Uint12**       | 89259 ✅ | non-zero to non-zero  -> 2900 gas |
 
 
 ## WTF Gas Optimization 贡献者
