@@ -196,6 +196,8 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 forge test --contracts 10_Increment/Increment.T.sol --gas-report
 ```
 
+**Gas report**
+
 | Increment | Gas Cost |
 | --------- | -------- |
 | i += 1    | 270      |
@@ -216,7 +218,7 @@ forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 **Gas report**
 
 | ReentrancyGuard  | Gas Cost |           tips                    |
-| -----------------| -------- |                                   |
+| -----------------| -------- | ----------------------------------|
 | Bool             | 69395    |                                   |
 | Uint01           | 69354    | 0 to non-zero  -> 20000 gas       |
 | **Uint12**       | 89259 ✅ | non-zero to non-zero  -> 2900 gas |
