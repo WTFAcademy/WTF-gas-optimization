@@ -28,6 +28,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [11. use uint in reentrancy guard](#11-use-uint-in-reentrancy-guard)
 
+[12. use < over <=](#12-use--over-)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -222,6 +224,23 @@ forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 | Bool             | 27757 |                                   |
 | Uint01           | 27604 | 0 to non-zero  -> 20000 gas       |
 | **Uint12**       | 13908 ✅ | non-zero to non-zero  -> 2900 gas |
+
+## 12. use < over <=
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/12_LessThan/LessThan.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/12_LessThan/readme.md)
+
+**Testing**
+
+```bash
+forge test --contracts 12_LessThan/LessThan.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator    | Gas Cost |
+| ---------------- | -------- |
+| <=      | 250   |
+| <| 247  ✅  |
 
 
 ## WTF Gas Optimization 贡献者
