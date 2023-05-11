@@ -44,7 +44,7 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 | ---------------- | -------- |
 | varConstant      | 161 ✅ |
 | **varImmutable** | 161 ✅   |
-| variable         | 2305     |
+| variable         | 2261  |
 
 ## 2. use calldata over memory
 
