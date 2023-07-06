@@ -20,7 +20,7 @@ forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 
 ```solidity
 contract Bitmap {
-    bool[10] implementationWithBool;
+    bool[8] implementationWithBool;
     uint8 implementationWithBitmap;
 
     function setDataWithBoolArray(bool[8] memory data) external {

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 contract Bitmap {
-    bool[10] implementationWithBool;
+    bool[8] implementationWithBool;
     uint8 implementationWithBitmap;
 
     function setDataWithBoolArray(bool[8] memory data) external {
