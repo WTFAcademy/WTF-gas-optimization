@@ -28,7 +28,13 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [11. use uint in reentrancy guard](#11-use-uint-in-reentrancy-guard)
 
-[12. use < over <=](#12-use--over-)
+[12. use < over <=](#12-use--over)
+
+[13. optimized selector/method id](#13-optimized-selector)
+
+[14. selector/method-id order matters](#14-selector-order)
+
+[15. use shorter string in require](#15-shorter-string-in-require)
 
 ## 1. use constant and immutable
 
@@ -241,6 +247,57 @@ forge test --contracts 12_LessThan/LessThan.t.sol --gas-report
 | ---------------- | -------- |
 | <=      | 250   |
 | <| 247  ✅  |
+
+
+## 13 optimized selector
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName/readme.md)
+
+**Testing**
+
+```bash
+forge test --contracts 13_MethodName/MethodName.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator    | Gas Cost |
+| ---------------- | -------- |
+| regular selector 0xf8a8fd6d   | 5285   |
+| optimized selector 0x000073eb | 5265  ✅  |
+
+## 14 selector order
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/14_MethodIdSort) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/14_MethodIdSort/readme.md)
+
+**Testing**
+
+```bash
+forge test --contracts 14_MethodIdSort/MethodIdSort.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| test1  0x0dbe671f | 164      |   
+| test2  0x66e41cb7 | 142      |   
+| test3  0x0a8e8e01 | 120      |   
+| test_y2K 0x000073eb | 98 ✅    | 
+
+## 15 shorter string in require()
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/15_RequireString)
+
+**Testing**
+
+```bash
+forge test --contracts 15_RequireString/RequireString.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| longString | 2578      |   
+| shortString  | 2347 ✅    |   
 
 
 ## WTF Gas Optimization 贡献者
