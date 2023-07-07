@@ -310,3 +310,7 @@ forge test --contracts 15_RequireString/RequireString.t.sol --gas-report
   <img src="https://contrib.rocks/image?repo=WTFAcademy/WTF-gas-optimization" />
 </a>
 </div>
+
+## Reference
+
+1. [Solidity-Gas-Optimization-Tips](https://github.com/devanshbatham/Solidity-Gas-Optimization-Tips)
