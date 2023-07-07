@@ -18,13 +18,22 @@ forge test --contracts 01_Constant/Constant.t.sol --gas-report
 
 ## DemoCode
 
-下面用种不同的修饰符定义了 3 个变量。
+下面用种不同的修饰符定义了 3 个变量（放在不同的合约中方便测试gas，排除[selector顺序导致的gas计算不准确](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/14_MethodIdSort/readme.md)）。
 
 ```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
 contract Constant {
     uint256 public constant varConstant = 1000;
-    uint public immutable varImmutable = 1000;
-    uint public variable = 1000;
+}
+
+contract Immutable {
+    uint256 public immutable varImmutable = 1000;
+}
+
+contract Public {
+    uint256 public variable = 1000;
 }
 ```
 

@@ -23,7 +23,7 @@ forge test --contracts 04_Unchecked/Unchecked.T.sol --gas-report
 ```solidity
 contract Unchecked {
     function forNormal(uint256 times) external pure returns (uint256 result) {
-        for (uint256 i; i < 10000; i++) {
+        for (uint256 i; i < times; i++) {
             result = i + 1;
         }
     }
