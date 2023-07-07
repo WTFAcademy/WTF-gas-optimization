@@ -202,9 +202,9 @@ forge test --contracts 10_Increment/Increment.T.sol --gas-report
 
 | Increment | Gas Cost |
 | --------- | -------- |
-| i += 1    | 270      |
-| i = i +1  | 248      |
-| i++       | 220      |
+| i += 1    | 204      |
+| i = i +1  | 204      |
+| i++       | 198      |
 | ++i       | 193 ✅   |
 
 ## 11. use Uint in Reentrancy Guard

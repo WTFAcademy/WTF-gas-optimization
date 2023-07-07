@@ -1,23 +1,29 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-contract Increment {
-    function increment() external {
+contract Increment1 {
+    function increment1() external pure {
         uint num;
         num += 1;
     }
+}
 
-    function increment2() external {
+contract Increment2 {
+    function increment2() external pure {
         uint num;
         num = num + 1;
     }
+}
 
-    function increment3() external {
+contract Increment3 {
+    function increment3() external pure {
         uint num;
         num++;
     }
+}
 
-    function increment4() external {
+contract Increment4 {
+    function increment4() external pure {
         uint num;
         ++num;
     }

@@ -22,41 +22,40 @@ forge test --contracts 10_Increment/Increment.T.sol --gas-report
 下面分别用几种形式进行递增，来观察其 gas 差异。
 
 ```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
-
-contract Increment {
-    function increment() external {
+contract Increment1 {
+    function increment1() external pure {
         uint num;
         num += 1;
     }
+}
 
-    function increment2() external {
+contract Increment2 {
+    function increment2() external pure {
         uint num;
         num = num + 1;
     }
+}
 
-    function increment3() external {
+contract Increment3 {
+    function increment3() external pure {
         uint num;
         num++;
     }
+}
 
-    function increment4() external {
+contract Increment4 {
+    function increment4() external pure {
         uint num;
         ++num;
     }
 }
-
 ```
 
-以下是测试后的情况，建议如下：
-
-1. 如果是递增，建议使用 ++i;
-2. 如果需要叠加值，建议使用 i = i + n，而非其简写。
+以下是测试后的情况，建议递增使用 `++i`;
 
 | 数据类型 | gas 消耗 | 节省     | 结果    |
 | -------- | -------- | -------- | ------- |
-| i += 1   | 270      |          |         |
-| i = i +1 | 248      |          |         |
-| i++      | 220      |          |         |
-| ++i      | 193      | 87(≈32%) | ✅ 建议 |
+| i += 1   | 204      |          |         |
+| i = i +1 | 204      |          |         |
+| i++      | 198      |          |         |
+| ++i      | 193      | 5 (≈3%) | ✅ 建议 |
