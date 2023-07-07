@@ -4,7 +4,7 @@ Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能�
 
 Lead by [@0xKaso](https://github.com/0xKaso)
 
-## 大纲
+## Outline
 
 [1. use constant and immutable](#1-use-constant-and-immutable)
 
