@@ -34,7 +34,7 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [14. selector/method-id order matters](#14-selector-order)
 
-[15. use shorter string in require](#15-shorter-string-in-require)
+[15. use shorter string in require()](#15-shorter-string-in-require)
 
 ## 1. use constant and immutable
 
