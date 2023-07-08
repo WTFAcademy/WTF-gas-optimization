@@ -36,6 +36,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [15. use shorter string in require()](#15-shorter-string-in-require)
 
+[16. use short circuit in logic operation `||` or `&&`](#16-short-circuit-in-logic-operation)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -298,6 +300,23 @@ forge test --contracts 15_RequireString/RequireString.t.sol --gas-report
 | -------- | -------- |
 | longString | 2578      |   
 | shortString  | 2347 ✅    |   
+
+## 16. short circuit in logic operation
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/16_ShortCircuit)
+
+**Testing**
+
+```bash
+forge test --contracts 16_ShortCircuit/ShortCircuit.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| normal | 191,282      |   
+| shortCircuit  | 120 ✅    |   
 
 
 ## WTF Gas Optimization 贡献者
