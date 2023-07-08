@@ -38,6 +38,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [16. use short circuit in logic operation `||` or `&&`](#16-short-circuit-in-logic-operation)
 
+[17. delete variables to get gas refund](#17-delete-variables-to-get-gas-refund)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -317,6 +319,24 @@ forge test --contracts 16_ShortCircuit/ShortCircuit.t.sol --gas-report
 | -------- | -------- |
 | normal | 191,282      |   
 | shortCircuit  | 120 ✅    |   
+
+## 17. delete variables to get gas refund
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/17_DeleteVar)
+
+**Testing**
+
+```bash
+forge test --contracts 17_DeleteVar/DeleteVar.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| update | 22,238      |   
+| updateDefault  | 2360 ✅    |   
+| updateDelete  | 2316 ✅    |   
 
 
 ## WTF Gas Optimization 贡献者
