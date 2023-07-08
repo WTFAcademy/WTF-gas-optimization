@@ -40,6 +40,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [17. delete variables to get gas refund](#17-delete-variables-to-get-gas-refund)
 
+[18. do not initialize state variables with default values](#18-do-not-initialize-state-variables-with-default-values)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -337,6 +339,23 @@ forge test --contracts 17_DeleteVar/DeleteVar.t.sol --gas-report
 | update | 22,238      |   
 | updateDefault  | 2360 ✅    |   
 | updateDelete  | 2316 ✅    |   
+
+## 18. do not initialize state variables with default values
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/18_InitDefault)
+
+**Testing**
+
+```bash
+forge test --contracts 18_InitDefault/InitDefault.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| testDefault | 67,148 ✅    |   
+| testInitDefault  | 69,376     |   
 
 
 ## WTF Gas Optimization 贡献者
