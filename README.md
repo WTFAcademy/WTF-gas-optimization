@@ -42,6 +42,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [18. do not initialize state variables with default values](#18-do-not-initialize-state-variables-with-default-values)
 
+[19. swap 2 variables in 1 line with destructuring assignment](#19-swap-2-variables-in-1-line-with-destructuring-assignment)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -356,6 +358,26 @@ forge test --contracts 18_InitDefault/InitDefault.t.sol --gas-report
 | -------- | -------- |
 | testDefault | 67,148 ✅    |   
 | testInitDefault  | 69,376     |   
+
+
+## 19. swap 2 variables in 1 line with destructuring assignment
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/19_SwapVars)
+
+**Testing**
+
+```bash
+forge test --contracts 19_SwapVars/SwapVars.t.sol --gas-report
+```
+
+**Gas report**
+
+**This technique will not save gas, but it makes your code look better :p**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| swap | 282    |   
+| desSwap  | 282 ✅    |   
 
 
 ## WTF Gas Optimization 贡献者
