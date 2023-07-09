@@ -44,6 +44,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [19. swap 2 variables in 1 line with destructuring assignment](#19-swap-2-variables-in-1-line-with-destructuring-assignment)
 
+[20. set constructor to payable to save gas](#20-set-constructor-to-payable-to-save-gas)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -378,6 +380,44 @@ forge test --contracts 19_SwapVars/SwapVars.t.sol --gas-report
 | -------- | -------- |
 | swap | 282    |   
 | desSwap  | 282 ✅    |   
+
+## 20. set constructor to payable to save gas
+
+You can cut out 10 opcodes in the creation-time EVM bytecode if you declare a constructor payable. The following opcodes are cut out:
+
+- `CALLVALUE`
+- `DUP1`
+- `ISZERO`
+- `PUSH2`
+- `JUMPI`
+- `PUSH1`
+- `DUP1`
+- `REVERT`
+- `JUMPDEST`
+- `POP`
+
+In Solidity, this chunk of assembly would mean the following:
+
+```solidity
+if(msg.value != 0) revert();
+```
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/20_PayableConstructor)
+
+**Testing**
+
+```bash
+forge test --contracts 20_PayableConstructor/PayableConstructor.t.sol --gas-report
+```
+
+**Gas report**
+
+**This technique will not save gas, but it makes your code look better :p**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| default | 67,171    |   
+| payable constructor  | 67,102 ✅    |   
 
 
 ## WTF Gas Optimization 贡献者
