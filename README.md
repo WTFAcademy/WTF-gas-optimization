@@ -46,6 +46,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [20. set constructor to payable to save gas](#20-set-constructor-to-payable-to-save-gas)
 
+[21. use bytes32 for short string](#21-use-bytes32-for-short-string)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -412,12 +414,27 @@ forge test --contracts 20_PayableConstructor/PayableConstructor.t.sol --gas-repo
 
 **Gas report**
 
-**This technique will not save gas, but it makes your code look better :p**
-
 | Operator  | Gas Cost |
 | -------- | -------- |
 | default | 67,171    |   
 | payable constructor  | 67,102 ✅    |   
+
+## 21. use bytes32 for short string
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/20_PayableConstructor)
+
+**Testing**
+
+```bash
+forge test --contracts 21_Bytes32String/Bytes32String.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| setBytes32 | 22,222 ✅    |   
+| setString  | 22682    |   
 
 
 ## WTF Gas Optimization 贡献者
