@@ -137,6 +137,9 @@ forge test --contracts 05_Uint/Uint.T.sol --gas-report
 | set Uint8        | 22234     |
 | set Uint128      | 22234     |
 | **set Uint256**  | 22238  |
+| UseUint8      | 53,427     | 
+| UseUint32     | 53,895     | 
+| **UseUint256**    | 42,950 ✅   |
 
 ## 6. use custom error over require/assert
 

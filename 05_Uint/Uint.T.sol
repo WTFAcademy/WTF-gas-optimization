@@ -39,4 +39,17 @@ contract UncheckedTest is Test {
     function testSetUint256() public {
         uint256Test.setUint256();
     }
+
+    // use uint variable in loops
+    function testUseUint8() public {
+        uint8Test.useUint8();
+    }
+
+    function testUseUint32() public {
+        uint32Test.useUint32();
+    }
+
+    function testUseUint256() public {
+        uint256Test.useUint256();
+    }
 }
