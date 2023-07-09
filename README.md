@@ -48,6 +48,10 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [21. use bytes32 for short string](#21-use-bytes32-for-short-string)
 
+[22. use fixed-size array over dynamic array](#22-use-fixed-size-array-over-dynamic-array)
+
+[23. use event to store data when possible](#23-use-event-to-store-data-when-possible)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -424,7 +428,7 @@ forge test --contracts 20_PayableConstructor/PayableConstructor.t.sol --gas-repo
 
 ## 21. use bytes32 for short string
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/20_PayableConstructor)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/21_Bytes32String)
 
 **Testing**
 
@@ -437,7 +441,42 @@ forge test --contracts 21_Bytes32String/Bytes32String.t.sol --gas-report
 | Operator  | Gas Cost |
 | -------- | -------- |
 | setBytes32 | 22,222 ✅    |   
-| setString  | 22682    |   
+| setString  | 22,682    |   
+
+## 22. use fixed-size array over dynamic array
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/22_FixedSize)
+
+**Testing**
+
+```bash
+forge test --contracts 22_FixedSize/FixedSize.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| set dynamic-length array | 2,224,770 gas ✅    |   
+| set fixed-length array  | 2,182,608    |   
+
+## 23. use event to store data when possible
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/23_Event)
+
+**Testing**
+
+```bash
+forge test --contracts 23_Event/Event.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| useVar | 22,216 gas     |   
+| useEvent  | 1,189  ✅  |   
+
 
 
 ## WTF Gas Optimization 贡献者
