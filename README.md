@@ -1,6 +1,8 @@
 # WTF Gas Optimization
 
-Solidity gas optimization techniques, using Foundry. 总结写 Solidity 智能合约更省 gas 的技巧。
+Solidity gas optimization techniques, verified with Foundry. 
+
+总结 Solidity 智能合约省 gas 技巧，并使用 Foundry 验证。
 
 Lead by [@0xKaso](https://github.com/0xKaso)
 
