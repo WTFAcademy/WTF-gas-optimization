@@ -124,19 +124,19 @@ forge test --contracts 04_unchecked/Unchecked.T.sol --gas-report
 **Testing**
 
 ```
-forge test --contracts 05_uint/Uint.T.sol --gas-report
+forge test --contracts 05_Uint/Uint.T.sol --gas-report
 ```
 
 **Gas report**
 
 | Function Name    | Gas Cost |
 | ---------------- | -------- |
-| read Uint8       | 2379     |
-| read Uint128     | 2465     |
-| **read Uint256** | 2317 ✅  |
-| set Uint8        | 5355     |
-| set Uint128      | 5358     |
-| **set Uint256**  | 5322 ✅  |
+| read Uint8       | 2301     |
+| read Uint32     | 2301     |
+| **read Uint256** | 2261 ✅  |
+| set Uint8        | 22234     |
+| set Uint128      | 22234     |
+| **set Uint256**  | 22238  |
 
 ## 6. use custom error over require/assert
 

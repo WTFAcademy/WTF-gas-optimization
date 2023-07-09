@@ -16,61 +16,49 @@ forge test --contracts 05_uint/Uint.T.sol --gas-report
 
 ## DemoCode
 
-下面分别用 uin8~256 进行测试，来检测其读取和写入的情况。
+下面分别用 `uin8`, `uint32`, `uint256` 进行测试，来检测其读取和写入的情况。使用不同的合约是为了排除 selector 顺序对gas的影响。
 
 ```solidity
-contract Uint {
-    uint8 public a = 10;
-    uint16 public b = 10;
-    uint32 public c = 10;
-    uint64 public d = 10;
-    uint128 public e = 10;
-    uint256 public f = 10;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
 
-    function setA(uint8 a_) external {
-        a = a_;
+contract Uint8Test {
+    uint8 public Uint8;
+
+    function setUint8() external {
+        Uint8 = 1;
     }
+}
 
-    function setB(uint16 b_) external {
-        b = b_;
+contract Uint32Test {
+    uint32 public Uint32;
+
+    function setUint32() external {
+        Uint32 = 1;
     }
+}
 
-    function setC(uint32 c_) external {
-        c = c_;
-    }
-
-    function setD(uint64 d_) external {
-        d = d_;
-    }
-
-    function setE(uint128 e_) external {
-        e = e_;
-    }
-
-    function setF(uint256 f_) external {
-        f = f_;
+contract Uint256Test {
+    uint256 public Uint256;
+    function setUint256() external {
+        Uint256 = 1;
     }
 }
 ```
 
-以下是经过测试得到的两种情况。gas 优化建议如下：
-
-1. 读取和写入，都可以优先使用 uint256
+以下是经过测试得到的读取和写入的gas报告
 
 | 读取关键字 | gas 消耗 | 节省     | 结果    |
 | ---------- | -------- | -------- | ------- |
-| uint8      | 2303     |          |         |
-| uint16     | 2413     |          |         |
-| uint32     | 2390     |          |         |
-| uint64     | 2330     |          |         |
-| uint128    | 2464     |          |         |
-| uint256    | 2318     | 146(≈6%) | ✅ 建议 |
+| uint8      | 2301     |          |         |
+| uint32     | 2301     |          |         |
+| uint256    | 2261     | 40(≈2%) | ✅ 建议 |
 
 | 写入关键字 | gas 消耗 | 节省     | 结果    |
 | ---------- | -------- | -------- | ------- |
-| uint8      | 5310     |          |         |
-| uint16     | 5387     |          |         |
-| uint32     | 5366     |          |         |
-| uint64     | 5350     |          |         |
-| uint128    | 5446     |          |         |
-| uint256    | 5256     | 190(≈4%) | ✅ 建议 |
+| uint8      | 22234     |   4 (≈0.02%)      |         |
+| uint32     | 22234     |   4  (≈0.02%)     |         |
+| uint256    | 22238     |    |  |
+
+
+我们可以看到，读取 `uint256` 比 `uint8` 和 `uint32` 便宜了 40 gas，而写入时贵了 4 gas。因此 `uint8` 和 `uint32` 的变量不一定比 `uint256` 的变量省 gas。

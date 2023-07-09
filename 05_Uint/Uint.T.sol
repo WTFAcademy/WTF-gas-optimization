@@ -4,57 +4,39 @@ import "forge-std/Test.sol";
 import "./Uint.sol";
 
 contract UncheckedTest is Test {
-    Uint public uintContract;
+    Uint8Test public uint8Test;
+    Uint32Test public uint32Test;
+    Uint256Test public uint256Test;
 
     function setUp() public {
-        uintContract = new Uint();
+        uint8Test = new Uint8Test();
+        uint32Test = new Uint32Test();
+        uint256Test = new Uint256Test();
     }
 
-    function testGetUint8() public {
-        uintContract.Uint8();
+    // read uint variable
+    function testReadUint8() public view {
+        uint8Test.Uint8();
     }
 
-    function testGetUint16() public {
-        uintContract.Uint16();
+    function testReadUint32() public view {
+        uint32Test.Uint32();
     }
 
-    function testGetUint32() public {
-        uintContract.Uint32();
+    function testReadUint256() public view {
+        uint256Test.Uint256();
     }
 
-    function testGetUint64() public {
-        uintContract.Uint64();
-    }
-
-    function testGetUint128() public {
-        uintContract.Uint128();
-    }
-
-    function testGetUint256() public {
-        uintContract.Uint256();
-    }
-
+    // set uint variable
     function testSetUint8() public {
-        uintContract.setUint8(11);
-    }
-
-    function testSetUint16() public {
-        uintContract.setUint16(11);
+        uint8Test.setUint8();
     }
 
     function testSetUint32() public {
-        uintContract.setUint32(11);
-    }
-
-    function testSetUint64() public {
-        uintContract.setUint64(11);
-    }
-
-    function testSetUint128() public {
-        uintContract.setUint128(11);
+        uint32Test.setUint32();
     }
 
     function testSetUint256() public {
-        uintContract.setUint256(11);
+        uint256Test.setUint256();
     }
 }
