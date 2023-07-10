@@ -54,6 +54,8 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [23. use event to store data when possible](#23-use-event-to-store-data-when-possible)
 
+[24. use `mapping` over `array` when possible](#24-use-mapping-over-array-when-possible)
+
 ## 1. use constant and immutable
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/Constant.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/01_Constant/readme.md)
@@ -462,7 +464,7 @@ forge test --contracts 22_FixedSize/FixedSize.t.sol --gas-report
 | set dynamic-length array | 2,224,770 gas ✅    |   
 | set fixed-length array  | 2,182,608    |   
 
-## 23. use event to store data when possible
+## 23. use `event` to store data when possible
 
 [Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/23_Event)
 
@@ -476,9 +478,29 @@ forge test --contracts 23_Event/Event.t.sol --gas-report
 
 | Operator  | Gas Cost |
 | -------- | -------- |
-| useVar | 22,216 gas     |   
+| useVar | 22,216     |   
 | useEvent  | 1,189  ✅  |   
 
+## 24. use `mapping` over `array` when possible
+
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/24_MappingArray)
+
+**Testing**
+
+```bash
+forge test --contracts 24_MappingArray/MappingArray.t.sol --gas-report
+```
+
+**Gas report**
+
+| Operator  | Gas Cost |
+| -------- | -------- |
+| Mapping get | 451 ✅     |   
+| Mapping insert | 22,385 ✅     |   
+| Mapping remove | 305 ✅     |   
+| Array get | 710      |   
+| Array insert | 44,442      |   
+| Array remove | 748      |   
 
 
 ## WTF Gas Optimization 贡献者
