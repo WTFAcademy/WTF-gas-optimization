@@ -22,7 +22,7 @@ Lead by [@0xKaso](https://github.com/0xKaso)
 
 [7. use local variable over storage](#7-use-local-variable-over-storage)
 
-[8. use clone2 over new/create2](#8-use-clone2-over-newcreate2)
+[8. use clone over new/create2 to deploy contracts](#8-use-clone-over-newcreate2-to-deploy-contract)
 
 [9. packing storage slots](#9-packing-storage-slots)
 
@@ -184,9 +184,9 @@ forge test --contracts 07_LocalData/LocalData.T.sol --gas-report
 | **localData** | 1902339 ✅ |
 | storageData   | 4022155    |
 
-## 8. use clone2 over new/create2
+## 8. use clone over new/create2 to deploy contract
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/Clone2.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone2/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone/Clone.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/08_Clone/readme.md)
 
 **Testing**
 
