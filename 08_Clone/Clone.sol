@@ -51,14 +51,16 @@ contract WattingDeploy {
 }
 
 contract NormalFactory {
+    // 79,515 gas
     function newContract() external returns (address) {
         WattingDeploy metaCoin = new WattingDeploy();
         return address(metaCoin);
     }
 }
 
-contract Clone2Factory is CloneTool {
-    function clone2Contract(address libraryAddress) external returns (address) {
+contract CloneFactory is CloneTool {
+    // 41,493 gas
+    function cloneContract(address libraryAddress) external returns (address) {
         address metaCoin = createClone(libraryAddress);
         return metaCoin;
     }
@@ -71,6 +73,7 @@ contract Create2Factory {
         creationCode = type(WattingDeploy).creationCode;
     }
 
+    // 93,031 gas
     function create2Contract(uint _salt) external payable returns (address) {
         address addr;
         bytes memory bytecode = creationCode;

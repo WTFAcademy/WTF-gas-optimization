@@ -191,14 +191,14 @@ forge test --contracts 07_LocalData/LocalData.T.sol --gas-report
 **Testing**
 
 ```bash
-forge test --contracts 08_Clone2/Clone2.T.sol --gas-report
+forge test --contracts 08_Clone/Clone.T.sol --gas-report
 ```
 
 **Gas report**
 
 | Create Type | Gas Cost |
 | ----------- | -------- |
-| **clone2**  | 41493 ✅ |
+| **clone**  | 41493 ✅ |
 | create2     | 93031    |
 | new         | 79515    |
 

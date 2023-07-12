@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
-import "./Clone2.sol";
+import "./Clone.sol";
 
-contract Clone2Test {
+contract CloneTest {
     WattingDeploy wattingDeploy;
     NormalFactory normalFactory;
-    Clone2Factory clone2Factory;
+    CloneFactory cloneFactory;
     Create2Factory create2Factory;
 
     function setUp() public {
         wattingDeploy = new WattingDeploy();
         normalFactory = new NormalFactory();
-        clone2Factory = new Clone2Factory();
+        cloneFactory = new CloneFactory();
         create2Factory = new Create2Factory();
 
         create2Factory.initBytecode();
@@ -22,8 +22,8 @@ contract Clone2Test {
         normalFactory.newContract();
     }
 
-    function testClone2Factory() public {
-        clone2Factory.clone2Contract(address(wattingDeploy));
+    function testCloneFactory() public {
+        cloneFactory.cloneContract(address(wattingDeploy));
     }
 
     function testCreate2Factory() public {
