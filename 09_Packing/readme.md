@@ -10,11 +10,24 @@ forge test --contracts 09_Packing/Packing.T.sol --gas-report
 
 ## 功能简述
 
-我们知道，在Solidity合约中，是用连续32字节的插槽来储存变量的，当我们在一个插槽中放置多个变量，它被称为变量打包。
+Solidity合约是用连续32字节的插槽来储存变量的，当我们在一个插槽中放置多个变量，它被称为变量打包。
 
+如果我们试图打包的变量超过当前槽的32字节限制，它将被存储在一个新的插槽（slot）中。我们必须找出哪些变量最适合放在一起，以最小化浪费的空间，尽管Solidity 自动尝试将小的基本类型打包到同一插槽中，但是糟糕的结构体成员排序可能会阻止编译器执行此操作。
 
-如果我们试图打包的变量超过当前槽的32字节限制，它将被存储在一个新的插槽中。我们必须找出哪些变量最适合放在一起，以最小化浪费的空间，尽管Solidity 自动尝试将小的基本类型打包到同一插槽中，但是糟糕的结构体成员排序可能会阻止编译器执行此操作。
+在Uniswap v4的Pool合约中就用了这个技巧，将6个变量打包到一个插槽中。
 
+```
+struct Slot0 {
+    // the current price
+    uint160 sqrtPriceX96;
+    // the current tick
+    int24 tick;
+    uint8 protocolSwapFee;
+    uint8 protocolWithdrawFee;
+    uint8 hookSwapFee;
+    uint8 hookWithdrawFee;
+}
+```
 
 ## DemoCode
 
