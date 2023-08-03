@@ -29,4 +29,4 @@ contract MethodNameOpt {
 | 函数名    | MethodId | gas 消耗 | 节省      | 结果 |
 | -------- | -------- | -------- | -------- | -------- |
 | test  | 0xf8a8fd6d | 5285      |   |   |
-| test_y2K | 0x000073eb | 5266      |  20  |✅ 建议
+| test_y2K | 0x000073eb | 5265     |  20  |✅ 建议
