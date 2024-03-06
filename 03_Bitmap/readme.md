@@ -41,6 +41,9 @@ contract Bitmap {
     }
 }
 ```
+`implementationWithBitmap & (1 << indexFromRight)` 中的操作符`<<`是将数字的二进制表示向左移动指定的位数，右侧空出的位用0填充。例如，若`indexFromRight`是`2`，则`1 << 2`结果为`100`。
+
+然后对`implementationWithBitmap`和`(1 << indexFromRight)`两个数值的每一位进行`AND`操作。只有当两个数值在某一位上都是`1`时，结果的那一位才为`1`，否则为`0`。这种操作常用于检查某个特定位是否被设置为`1`
 
 以下是 2 种情况下，写入变量消耗的 gas 差异对比。gas 优化建议如下：
 
