@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 import "./Uint.sol";
 
-contract UncheckedTest is Test {
+contract UintTest is Test {
     Uint8Test public uint8Test;
     Uint32Test public uint32Test;
     Uint256Test public uint256Test;
