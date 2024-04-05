@@ -16,7 +16,7 @@ contract ShortCircuit {
         res = true;
     }
 
-    // No short circuit: gas 191,282
+    // No short circuit: gas 123,282 
     function normal() external pure{
         f() || g();
         // f() && g();
