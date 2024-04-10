@@ -19,11 +19,11 @@ forge test --contracts 17_DeleteVar/DeleteVar.t.sol --gas-report
 
 更多内容可查看：[WTF Solidity极简入门 - 8. 变量初始值](https://github.com/AmazingAng/WTF-Solidity/tree/main/08_InitialValue)
 
-与直接删除状态变量相比，将变量直接更新为默认值所消耗的gas会有所不同。当使用`delete`关键字删除一个状态变量时，Solidity会生成一个特定的操作码`SSTORE`来将变量的值设置为其类型的默认值。`delete`是一个高级操作，由编译器识别并优化，可以一次性清除所有相关存储，而在手动重置时可能需要更多的操作和更高的gas。
+与直接删除状态变量恢复至默认值相比，将变量直接更新为默认值所消耗的gas会有所不同。当使用`delete`关键字删除一个状态变量时，Solidity会生成一个特定的操作码`SSTORE`来将变量的值设置为其类型的默认值。`delete`是一个高级操作，由编译器识别并优化，可以一次性清除所有相关存储，而在手动重置时可能需要更多的操作和更高的gas。
 
 ## DemoCode
 
-下面的智能合约`DeleteVar`中定义了一个状态变量`balance`，以及两种不同删除`balance`状态变量数据的方法。每种方法的gas消耗都有所不同
+下面的智能合约`DeleteVar`中定义了一个状态变量`balance`，以及两种不同删除`balance`状态变量数据的方法。两种方法消耗的gas有所不同：
 
 ```solidity
 // SPDX-License-Identifier: MIT
