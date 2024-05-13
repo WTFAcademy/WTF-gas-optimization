@@ -461,8 +461,8 @@ forge test --contracts 22_FixedSize/FixedSize.t.sol --gas-report
 
 | Operator  | Gas Cost |
 | -------- | -------- |
-| set dynamic-length array | 2,224,770 gas ✅    |   
-| set fixed-length array  | 2,182,608    |   
+| set dynamic-length array | 2,224,770    |   
+| set fixed-length array  | 2,182,608 ✅    |   
 
 ## 23. use `event` to store data when possible
 
