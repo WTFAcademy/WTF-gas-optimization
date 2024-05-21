@@ -324,7 +324,7 @@ forge test --contracts 15_RequireString/RequireString.t.sol --gas-report
 
 ## 16. short circuit in logic operation
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/16_ShortCircuit)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/16_ShortCircuit/ShortCircuit.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/16_ShortCircuit/readme.md)
 
 **Testing**
 
