@@ -341,7 +341,7 @@ forge test --contracts 16_ShortCircuit/ShortCircuit.t.sol --gas-report
 
 ## 17. delete variables to get gas refund
 
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/17_DeleteVar)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/17_DeleteVar/DeleteVar.sol)|[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/17_DeleteVar/readme.md)
 
 **Testing**
 
