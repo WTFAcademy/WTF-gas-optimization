@@ -10,11 +10,11 @@ contract UncheckedTest is Test {
         uncheck = new Unchecked();
     }
 
-    function testForNormal() public {
+    function testForNormal() public view {
         uncheck.forNormal(10000);
     }
 
-    function testForUnckecked() public {
+    function testForUnckecked() public view {
         uncheck.forUnckecked(10000);
     }
 }
