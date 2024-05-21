@@ -307,7 +307,7 @@ forge test --contracts 14_MethodIdSort/MethodIdSort.t.sol --gas-report
 | test_y2K 0x000073eb | 98 ✅    | 
 
 ## 15 shorter string in require()
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/15_RequireString)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/15_RequireString/RequireString.sol)｜[文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/15_RequireString)
 
 **Testing**
 
