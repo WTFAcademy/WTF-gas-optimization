@@ -18,7 +18,7 @@ forge test --contracts 08_Clone/Clone.T.sol --gas-report
 
 ## DemoCode
 
-下面分别用三种形式来创建自合约，观察gas差异：
+下面分别用三种形式来创建自合约，观察 gas 差异：
 
 ```solidity
 // new
