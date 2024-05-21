@@ -273,7 +273,7 @@ forge test --contracts 12_LessThan/LessThan.t.sol --gas-report
 
 
 ## 13 optimized selector
-[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName/readme.md)
+[Code](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName/MethodName.sol) | [文章](https://github.com/WTFAcademy/WTF-gas-optimization/blob/main/13_MethodName/readme.md)
 
 **Testing**
 
