@@ -16,7 +16,7 @@ forge test --contracts 05_uint/Uint.T.sol --gas-report
 
 ## DemoCode
 
-下面分别用 `uin8`, `uint32`, `uint256` 进行测试，来检测其读取，写入，和循环计算的情况。使用不同的合约排除了selector顺序对gas的影响。
+下面分别用 `uin8`, `uint32`, `uint256` 进行测试，来检测其读取，写入，和循环计算的情况。使用不同的合约排除了 selector 顺序对 gas 的影响。
 
 ```solidity
 // SPDX-License-Identifier: MIT
