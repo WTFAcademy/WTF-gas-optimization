@@ -5,7 +5,7 @@
 根据[Foundry 官方文档](https://getfoundry.sh/)配置好运行环境后，于本项目下执行下列命令，即可看到实际 gas 差异对比。
 
 ```bash
-forge test --contracts 02_calldataAndMemory/CalldataAndMemory.T.sol --gas-report
+forge test --contracts 02_CalldataAndMemory/CalldataAndMemory.T.sol --gas-report
 ```
 
 ## 功能简述
