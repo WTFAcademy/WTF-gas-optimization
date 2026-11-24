@@ -1,4 +1,5 @@
 [profile.default]
+solc = "0.8.39"
 src = 'src'
 test = '.'
 no_match_path = 'draft/**'

@@ -1,5 +1,7 @@
 # WTF Gas Optimization
 
+可运行的 Foundry 示例使用 Solidity 0.8.39、Foundry v1.10.0 和 forge-std v1.17.0。克隆后运行 `git submodule update --init --recursive`，再运行 `forge test`。
+
 Solidity gas optimization techniques, verified with Foundry. 
 
 总结 Solidity 智能合约省 gas 技巧，并使用 Foundry 验证。
