@@ -1,5 +1,7 @@
 [profile.default]
 src = 'src'
+test = '.'
+no_match_path = 'draft/**'
 out = 'out'
 libs = ['lib']
 

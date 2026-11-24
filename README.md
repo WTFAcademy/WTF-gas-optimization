@@ -115,7 +115,7 @@ forge test --contracts 03_Bitmap/Bitmap.T.sol --gas-report
 **Testing**
 
 ```
-forge test --contracts 04_unchecked/Unchecked.T.sol --gas-report
+forge test --contracts 04_Unchecked/Unchecked.T.sol --gas-report
 ```
 
 **Gas report**
@@ -261,7 +261,7 @@ forge test --contracts 11_ReentrancyGuard/ReentrancyGuard.T.sol --gas-report
 **Testing**
 
 ```bash
-forge test --contracts 12_LessThan/LessThan.t.sol --gas-report
+forge test --contracts 12_LessThan/LessThan.T.sol --gas-report
 ```
 
 **Gas report**
@@ -278,7 +278,7 @@ forge test --contracts 12_LessThan/LessThan.t.sol --gas-report
 **Testing**
 
 ```bash
-forge test --contracts 13_MethodName/MethodName.t.sol --gas-report
+forge test --contracts 13_MethodName/MethodName.T.sol --gas-report
 ```
 
 **Gas report**
@@ -294,7 +294,7 @@ forge test --contracts 13_MethodName/MethodName.t.sol --gas-report
 **Testing**
 
 ```bash
-forge test --contracts 14_MethodIdSort/MethodIdSort.t.sol --gas-report
+forge test --contracts 14_MethodIdSort/MethodIdSort.T.sol --gas-report
 ```
 
 **Gas report**
